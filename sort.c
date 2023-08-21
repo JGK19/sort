@@ -38,3 +38,18 @@ void insertion(int *array, int q) {
   }
 }
 
+void troca(int *a, int *b, long int *t) {
+  int x;
+  x = *a;
+  *a = *b;
+  *b = x;
+}
+
+void printArray(int *array, int q) {
+  printf("[");
+  for (int i = 0; i < q; i++) {
+    printf("%i, ", array[i]);
+  }
+  printf("]");
+  printf("\n");
+}
