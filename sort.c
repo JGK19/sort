@@ -26,3 +26,15 @@ void bubble(int *array, int q) {
   }
 }
 
+void insertion(int *array, int q) {
+  int i, x, j;
+  for (i = 1; i < q; i++) {
+    x = array[i];
+    while ((j >= 0) && (array[j] > x)) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = x;
+  }
+}
+
