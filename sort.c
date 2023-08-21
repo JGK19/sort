@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 void selection(int *array, int q) {
   int menor;
   for (int i = 0; i < q - 1; i++) {
@@ -12,3 +15,14 @@ void selection(int *array, int q) {
     }
   }
 }
+
+void bubble(int *array, int q) {
+  for (int i = 0; i < q - 1; i++) {
+    for (int j = 0; j < q - i - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        troca(&array[j], &array[j + 1]);
+      }
+    }
+  }
+}
+
