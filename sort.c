@@ -92,3 +92,34 @@ int cmp(int *array, int *x, int *y, int i, int meio, int f) {
   }
   return result;
 }
+
+void quickSort(int *array, int ini, int fim){
+  int i, j, pivo;
+  if (fim - ini < 2) {
+    if (fim - ini == 1) {
+      if (array[fim] < array[ini]) {
+        trocax(&array[fim], &array[ini]);
+      }
+    }
+  } else {
+    i = ini;
+    j = fim;
+    pivo = array[ini];
+
+    while (j > i) {
+      i++;
+      while(array[i] < pivo) {
+        i++;
+      }
+      while (array[j] > pivo) {
+        j--;
+      }
+      if (j > i) {
+        trocax(&array[j], &array[i]);
+      }
+    }
+    trocax(&array[ini], &array[j]);
+    quickSort(array ,ini , j-1);
+    quickSort(array, j+1, fim);
+  }
+}
