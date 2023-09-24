@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void troca(int *a, int *b, long int *t) {
+  int x;
+  x = *a;
+  *a = *b;
+  *b = x;
+}
+
 void selection(int *array, int q) {
   int menor;
   for (int i = 0; i < q - 1; i++) {
@@ -36,22 +43,6 @@ void insertion(int *array, int q) {
     }
     array[j + 1] = x;
   }
-}
-
-void troca(int *a, int *b, long int *t) {
-  int x;
-  x = *a;
-  *a = *b;
-  *b = x;
-}
-
-void printArray(int *array, int q) {
-  printf("[");
-  for (int i = 0; i < q; i++) {
-    printf("%i, ", array[i]);
-  }
-  printf("]");
-  printf("\n");
 }
 
 void mergeSort(int *array, int i, int f) {
