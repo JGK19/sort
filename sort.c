@@ -93,7 +93,7 @@ int cmp(int *array, int *x, int *y, int i, int meio, int f) {
   return result;
 }
 
-void quickSort(int *array, int ini, int fim){
+void quickSort(int *array, int ini, int fim) {
   int i, j, pivo;
   if (fim - ini < 2) {
     if (fim - ini == 1) {
